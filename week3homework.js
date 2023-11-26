@@ -22,7 +22,8 @@ function greetCustomer() {
 // outputs a list with the size, crust, and toppings
 
 function getPizzaOrder(param1, param2, ...param3){
-    console.log("one ${param1} with ${param2} crust, and ${param3} for toppings");
+    let pizzaOrder = "one ${param1} with ${param2} crust, and ${param3} for toppings";
+    console.log(pizzaOrder)
     return param1 + param2 + param3;
 }
 
