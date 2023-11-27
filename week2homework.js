@@ -1,5 +1,5 @@
 let pizzaPlace = "Dan's Pizza"
-let numberOfToppings = "1"
+let numberOfToppings = 1
 
 
 console.log("Hi, welcome to " + pizzaPlace + ", we offer difference size pizzas and " + numberOfToppings + " different of toppings.")
