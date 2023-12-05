@@ -1,8 +1,8 @@
 This is Section 2 Week two homework
 
-#Daniel A Scott
+# Daniel A Scott
 
-#####I'm currently attending Savvy Coders boot camp to widen my skills and experience. 
+### I'm currently attending Savvy Coders boot camp to widen my skills and experience. 
 
 Goals for this course are:
 1. Learn full stack development so I can change career fields.
