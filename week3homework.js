@@ -1,7 +1,5 @@
 // Create an array of pizzaToppings with at least four different toppings
 
-const { get } = require("http");
-
 const pizzaToppings = [ "cheese", "pepperoni", "olives", "sausage"]
 
 // Create a greetCustomer function that prints a message that welcomes a guest,
@@ -11,21 +9,24 @@ const pizzaToppings = [ "cheese", "pepperoni", "olives", "sausage"]
 
 function greetCustomer() {
     console.log("Welcome to Pizza House, our toppings are:");
-    for (let topping of pizzaToppings)
-    console.log(topping)
+    for (let topping of pizzaToppings) {
+    console.log(topping);
+    }
 }
-
+greetCustomer()
 
 // Create a getPizzaOrder function that
 // has the parameters size, crust, and an indefinite amount of toppings as inputs
 // prints the order, i.e. "One large thick crust pizza with x, y, z, ... coming up!"
 // outputs a list with the size, crust, and toppings
 
-function getPizzaOrder(param1, param2, ...param3){
-    let pizzaOrder = "one ${param1} with ${param2} crust, and ${param3} for toppings";
-    console.log(pizzaOrder)
-    return param1 + param2 + param3;
+function getPizzaOrder(size, crust, ...toppings) {
+    let pizzaOrder = `one ${size} with ${crust} crust, and ${toppings} for toppings`;
+    console.log(pizzaOrder);
+    return [size + crust + toppings];
 }
+
+getPizzaOrder()
 
 
 // Create a preparePizza function that
@@ -33,17 +34,16 @@ function getPizzaOrder(param1, param2, ...param3){
 // prints something like "...Cooking pizza..."
 // outputs a pizza Object with appropriate key-value pairs for size, crust, and toppings
 
-function preparePizza(){
-    const details = [size, crust, ...toppings];
-    const pizza = {
-        size : size,
-        crust : crust,
-        toppings : toppings,
+function preparePizza([size, crust, toppings]) {
+    console.log("...Cooking Pizza...");
+    let pizza = {
+        size: size,
+        toppings: toppings,
+        crust: crust
     };
-    console.log(".,.Cooking Pizza...")
     return pizza;
-    
 }
+
 
 // Create a servePizza function that
 // has a parameter of a pizza Object
@@ -51,13 +51,12 @@ function preparePizza(){
 // outputs the same pizza Object that was passed in
 
 function servePizza(pizza) {
-    console.log("Order Up! Here's your" + pizza[size] + " " + pizza[crust] +" crust " + "with" + pizza[crust] + toppings)
-    return pizza
+    console.log(`Order Up! Here's your, ${pizza.size}, ${pizza.crust}, with ${pizza.toppings}`);
+    return pizza;
 }
 
 
 
 greetCustomer()
 getPizzaOrder("large", "thin", "pepperoni", "cheese", "peppers")
-preparePizza()
 servePizza(preparePizza)
