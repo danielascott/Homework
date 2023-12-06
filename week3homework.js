@@ -21,7 +21,7 @@ greetCustomer()
 // outputs a list with the size, crust, and toppings
 
 function getPizzaOrder(size, crust, ...toppings) {
-    let pizzaOrder = `one ${size} with ${crust} crust, and ${toppings} for toppings`;
+    let pizzaOrder = `one ${size} with ${crust} crust, and ${toppings}`;
     console.log(pizzaOrder);
     return [size + crust + toppings];
 }
