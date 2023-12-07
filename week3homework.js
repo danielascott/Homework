@@ -51,7 +51,7 @@ function preparePizza([size, crust, toppings]) {
 // outputs the same pizza Object that was passed in
 
 function servePizza(pizza) {
-    let pizzaDone = `Order Up! Here's your, ${pizza.size}, ${pizza.crust}, with ${pizza.toppings}`;
+    let pizzaDone = `Order Up! Here's your, ${pizza.size}`;
     console.log(pizzaDone)
     return pizza;
 }
@@ -59,6 +59,6 @@ function servePizza(pizza) {
 
 
 greetCustomer()
-const pizzaOrder = getPizzaOrder("large", "thin", "pepperoni", "cheese", "peppers");
+const pizzaOrder = getPizzaOrder("Large", " ","Thin", "pepperoni", "cheese", "peppers", "olives", "peppers pizza" );
 const pizza = preparePizza(pizzaOrder);
 servePizza(pizza);
