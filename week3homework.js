@@ -13,7 +13,7 @@ function greetCustomer() {
     console.log(topping);
     }
 }
-greetCustomer()
+
 
 // Create a getPizzaOrder function that
 // has the parameters size, crust, and an indefinite amount of toppings as inputs
@@ -26,7 +26,7 @@ function getPizzaOrder(size, crust, ...toppings) {
     return [size + crust + toppings];
 }
 
-getPizzaOrder()
+
 
 
 // Create a preparePizza function that
@@ -36,10 +36,11 @@ getPizzaOrder()
 
 function preparePizza([size, crust, toppings]) {
     console.log("...Cooking Pizza...");
-    let pizza = {
+    constpizza = {
         size: size,
-        toppings: toppings,
-        crust: crust
+        crust: crust,
+        toppings: toppings
+
     };
     return pizza;
 }
@@ -51,7 +52,8 @@ function preparePizza([size, crust, toppings]) {
 // outputs the same pizza Object that was passed in
 
 function servePizza(pizza) {
-    console.log(`Order Up! Here's your, ${pizza.size}, ${pizza.crust}, with ${pizza.toppings}`);
+    let pizzaDone = `Order Up! Here's your, ${pizza.size}, ${pizza.crust}, with ${pizza.toppings}`;
+    console.log(pizzaDone)
     return pizza;
 }
 
