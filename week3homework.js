@@ -1,6 +1,6 @@
 // Create an array of pizzaToppings with at least four different toppings
 
-const pizzaToppings = [ "cheese", "pepperoni", "olives", "sausage"]
+const pizzaToppings = ["cheese", "pepperoni", "olives", "sausage"]
 
 // Create a greetCustomer function that prints a message that welcomes a guest,
 // then informs them of the available toppings by looping over pizzaToppings
@@ -36,11 +36,10 @@ function getPizzaOrder(size, crust, ...toppings) {
 
 function preparePizza([size, crust, toppings]) {
     console.log("...Cooking Pizza...");
-    constpizza = {
-        size: size,
-        crust: crust,
-        toppings: toppings
-
+    const pizza = {
+        size,
+        crust,
+        toppings,
     };
     return pizza;
 }
@@ -60,5 +59,6 @@ function servePizza(pizza) {
 
 
 greetCustomer()
-getPizzaOrder("large", "thin", "pepperoni", "cheese", "peppers")
-servePizza(preparePizza)
+const pizzaOrder = getPizzaOrder("large", "thin", "pepperoni", "cheese", "peppers");
+const pizza = preparePizza(pizzaOrder);
+servePizza(pizza);
