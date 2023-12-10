@@ -301,11 +301,11 @@ let users = [
   }
 ]
 
-const userFive = users.filter(user => user.title)
+const userFive = users.filter(user => user.userId === 5)
 console.log(userFive)
 
 const titleBody = userFive.map(curr => {
-    return {title: curr.title, body: curr.body}
+    return {user: curr.userId, title: curr.title, body: curr.body}
 })
 console.log(titleBody)
 ;
